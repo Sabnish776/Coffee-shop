@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Cafe | Contact & Visit Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">☕ Aroma Cafe</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.php">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.php" class="btn btn-primary">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Dynamic JS Status Message -->
+    <div id="status-message"></div>
+
+    <div class="section-title">
+      <h2>Visit Us & Get in Touch</h2>
+      <p>Have a question or want to reserve a table? Send us a quick note!</p>
+    </div>
+
+    <!-- Contact & Info Grid -->
+    <div class="contact-grid">
+      <!-- Left: Cafe Information -->
+      <div class="contact-info">
+        <h3>📍 Location & Opening Hours</h3>
+        <p><strong>Address:</strong> 120 Specialty Boulevard, Downtown</p>
+        <p><strong>Phone:</strong> (555) 234-5678</p>
+        <p><strong>Email:</strong> contact@aromacafe.com</p>
+        <hr style="border-color: #332b26; margin: 20px 0;">
+        <h3>⏰ Hours</h3>
+        <p><strong>Monday - Friday:</strong> 6:30 AM - 7:00 PM</p>
+        <p><strong>Saturday - Sunday:</strong> 7:30 AM - 8:00 PM</p>
+        
+        <div style="margin-top: 25px;">
+          <a href="menu.php" class="btn btn-secondary">Browse Menu</a>
+        </div>
+      </div>
+
+      <!-- Right: Interactive Contact Form -->
+      <div class="contact-form">
+        <h3>✉️ Send a Message</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="user-name">Your Name</label>
+            <input type="text" id="user-name" required placeholder="e.g. Alex Johnson">
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email Address</label>
+            <input type="email" id="user-email" required placeholder="alex@example.com">
+          </div>
+          <div class="form-group">
+            <label for="user-message">Message or Reservation Request</label>
+            <textarea id="user-message" rows="4" required placeholder="Tell us how we can help..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Simple Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aroma Cafe. Simple HTML, CSS & JS Demonstration.</p>
+      <p>
+        <a href="index.html">Home</a> | 
+        <a href="menu.php">Menu</a> | 
+        <a href="contact.html">Contact</a> |
+        <a href="cart.php">Cart</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

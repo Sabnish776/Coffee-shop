@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Cafe | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">☕ Aroma Cafe</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.php">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.php" class="btn btn-primary">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Dynamic JS Status Message -->
+    <div id="status-message"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Freshly Brewed <span>Artisan Coffee</span></h1>
+        <p>Welcome to Aroma Cafe. We roast organic, single-origin beans daily to deliver the richest flavor right to your cup. Order online or stop by for a warm cup today.</p>
+        <div class="hero-buttons">
+          <a href="menu.php" class="btn btn-primary">Explore Menu</a>
+          <a href="contact.html" class="btn btn-secondary">Find Our Cafe</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-coffee.png" alt="Fresh cup of latte coffee">
+      </div>
+    </section>
+
+    <!-- Featured Coffee Highlights -->
+    <section>
+      <div class="section-title">
+        <h2>Customer Favorites</h2>
+        <p>Try our most popular specialty roasts</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <img src="images/menu-espresso.png" alt="Classic Espresso">
+          <div class="card-body">
+            <h3>Classic Espresso</h3>
+            <p>Rich double shot with sweet caramel undertones and golden crema.</p>
+            <div class="card-footer">
+              <span class="price">$3.50</span>
+              <button class="btn btn-primary" onclick="addToCart('Classic Espresso', 3.50)">Order</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/menu-coldbrew.png" alt="Nitro Cold Brew">
+          <div class="card-body">
+            <h3>Nitro Cold Brew</h3>
+            <p>Slow steeped for 20 hours and served icy cold with creamy nitrogen foam.</p>
+            <div class="card-footer">
+              <span class="price">$5.00</span>
+              <button class="btn btn-primary" onclick="addToCart('Nitro Cold Brew', 5.00)">Order</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/menu-croissant.png" alt="Artisan Croissant">
+          <div class="card-body">
+            <h3>Butter Croissant</h3>
+            <p>Golden, flaky French pastry baked fresh in-house every morning.</p>
+            <div class="card-footer">
+              <span class="price">$3.00</span>
+              <button class="btn btn-primary" onclick="addToCart('Butter Croissant', 3.00)">Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- React Drink Customizer Section -->
+    <section class="react-section">
+      <div id="coffee-customizer-root"></div>
+    </section>
+  </main>
+
+  <!-- Simple Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aroma Cafe. Simple HTML, CSS & JS Demonstration.</p>
+      <p>
+        <a href="index.html">Home</a> | 
+        <a href="menu.php">Menu</a> | 
+        <a href="contact.html">Contact</a> |
+        <a href="cart.php">Cart</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+
+  <!-- React 18 & Coffee Customizer Component -->
+  <script src="js/react.production.min.js"></script>
+  <script src="js/react-dom.production.min.js"></script>
+  <script src="customizer.js"></script>
+</body>
+</html>

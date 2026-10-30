@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Cafe | Menu & Order</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if (window.location.protocol.startsWith('http')) {
+      window.location.replace('menu.php');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">☕ Aroma Cafe</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.php" class="btn btn-primary">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Dynamic JS Status Message -->
+    <div id="status-message"></div>
+
+    <div class="section-title">
+      <h2>Our Handcrafted Menu</h2>
+      <p>Select your favorite drink or pastry and add it to your order</p>
+    </div>
+
+    <!-- Live Cart Summary Display -->
+    <div class="cart-summary-box">
+      <div>
+        <strong>Current Order Total: </strong>
+        <span id="cart-total-price" class="price">$0.00</span>
+      </div>
+      <div>
+        <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+        <a href="cart.php" class="btn btn-primary">View Cart & Checkout</a>
+      </div>
+    </div>
+
+    <!-- Menu Items Grid -->
+    <div class="cards-grid">
+      <!-- Item 1 -->
+      <div class="card">
+        <img src="images/menu-espresso.png" alt="Classic Espresso">
+        <div class="card-body">
+          <h3>Classic Espresso</h3>
+          <p>Full-bodied Italian double shot with a velvety crema layer.</p>
+          <div class="card-footer">
+            <span class="price">$3.50</span>
+            <button class="btn btn-primary" onclick="addToCart('Classic Espresso', 3.50)">+ Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="card">
+        <img src="images/hero-coffee.png" alt="Velvet Latte">
+        <div class="card-body">
+          <h3>Velvet Latte</h3>
+          <p>Silky steamed micro-foam milk poured over fresh roast espresso.</p>
+          <div class="card-footer">
+            <span class="price">$4.50</span>
+            <button class="btn btn-primary" onclick="addToCart('Velvet Latte', 4.50)">+ Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="card">
+        <img src="images/menu-coldbrew.png" alt="Nitro Cold Brew">
+        <div class="card-body">
+          <h3>Nitro Cold Brew</h3>
+          <p>Slow cold-steeped coffee infused with nitrogen for an ultra-smooth finish.</p>
+          <div class="card-footer">
+            <span class="price">$5.00</span>
+            <button class="btn btn-primary" onclick="addToCart('Nitro Cold Brew', 5.00)">+ Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="card">
+        <img src="images/menu-croissant.png" alt="French Croissant">
+        <div class="card-body">
+          <h3>Butter Croissant</h3>
+          <p>Flaky, crisp golden crust with a soft buttery interior baked daily.</p>
+          <div class="card-footer">
+            <span class="price">$3.00</span>
+            <button class="btn btn-primary" onclick="addToCart('Butter Croissant', 3.00)">+ Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hyperlink Callout to Contact Page -->
+    <div style="text-align: center; margin: 40px 0;">
+      <p style="margin-bottom: 15px; color: #b5a99f;">Need customized brewing or catering for events?</p>
+      <a href="contact.html" class="btn btn-secondary">Get in Touch with Our Baristas</a>
+    </div>
+  </main>
+
+  <!-- Simple Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aroma Cafe. Simple HTML, CSS & JS Demonstration.</p>
+      <p>
+        <a href="index.html">Home</a> | 
+        <a href="menu.html">Menu</a> | 
+        <a href="contact.html">Contact</a> |
+        <a href="cart.php">Cart</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
